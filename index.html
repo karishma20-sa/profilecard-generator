@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile Card Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- INPUT SECTION -->
+        <div class="form-section">
+            <h2>Create Profile</h2>
+
+            <input type="text" id="nameInput" placeholder="Enter Name">
+            <input type="text" id="roleInput" placeholder="Enter Role">
+            <div class="file-upload-row">
+             <span class="file-text">Insert Image</span>
+            <input type="file" id="imageUpload" accept="image/*">
+            </div>
+            <textarea id="bioInput" placeholder="Enter Bio"></textarea>
+            <input type="text" id="linkedinInput" placeholder="LinkedIn Link">
+            <input type="text" id="githubInput" placeholder="GitHub Link">
+
+            <button onclick="downloadCard()">Download Card</button>
+        </div>
+
+        <!-- LIVE PREVIEW -->
+        <div class="preview-section">
+            <div class="profile-card" id="profileCard">
+                <img id="previewImage" src="https://via.placeholder.com/150">
+                <h3 id="previewName">Your Name</h3>
+                <p id="previewRole">Your Role</p>
+                <p id="previewBio">Your bio will appear here...</p>
+                <div class="links">
+                    <a id="previewLinkedin" href="#" target="_blank">LinkedIn</a>
+                    <a id="previewGithub" href="#" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
