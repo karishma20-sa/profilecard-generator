@@ -65,3 +65,13 @@ githubInput.addEventListener("input", () => {
     });
 
 });
+function downloadCard() {
+    const card = document.getElementById("profileCard");
+
+    html2canvas(card, { useCORS: true }).then(canvas => {
+        const link = document.createElement("a");
+        link.download = "profile-card.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    });
+}
